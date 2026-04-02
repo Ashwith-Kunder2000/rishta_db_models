@@ -5,10 +5,13 @@
   "private": false,
   "files": [
     "models",
+    "migrations",
+    "sequelize-config.js",
+    ".sequelizerc",
     "db.js"
   ],
   "scripts": {
-    "migrate": "sequelize-cli db:migrate"
+    "migrate": "sequelize-cli db:migrate --config sequelize-config.js"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"

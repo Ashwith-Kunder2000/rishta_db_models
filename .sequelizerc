@@ -1,6 +1,15 @@
-const path = require('path');
+/*const path = require('path');
 
 module.exports = {
   config: path.resolve('sequelize-config.js'),
   'migrations-path': path.resolve('migrations')
+};*/
+
+const path = require('path');
+
+module.exports = {
+  'config': path.resolve('node_modules/@Ashwith-Kunder2000/db-models/sequelize-config.js'),
+  'models-path': path.resolve('node_modules/@Ashwith-Kunder2000/db-models/models'),
+  'seeders-path': path.resolve('node_modules/@Ashwith-Kunder2000/db-models/seeders'),
+  'migrations-path': path.resolve('node_modules/@Ashwith-Kunder2000/db-models/migrations')
 };
