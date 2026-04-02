@@ -1,7 +1,8 @@
-const db = require('./db');
+const { initialise, getInstance } = require('./db');
 const { loadModels } = require('./models');
 
 module.exports = {
-  ...db,
+  initialise,
+  getInstance,
   loadModels
 };
