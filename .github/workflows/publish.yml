@@ -29,12 +29,12 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      # Verify package name & version (debug step)
+      # Verify package.json
       - name: Check package.json
         run: cat package.json
 
-      # Publish package (safe)
+      # Publish package
       - name: Publish Package
-      run: npm publish
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
