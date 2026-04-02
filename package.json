@@ -1,6 +1,6 @@
 {
   "name": "@Ashwith-Kunder2000/db-models",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "models/index.js",
   "private": false,
   "files": [
