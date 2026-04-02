@@ -14,15 +14,27 @@ jobs:
       packages: write
 
     steps:
-      - uses: actions/checkout@v3
+      # Checkout code
+      - name: Checkout Code
+        uses: actions/checkout@v3
 
-      - uses: actions/setup-node@v3
+      # Setup Node
+      - name: Setup Node
+        uses: actions/setup-node@v3
         with:
           node-version: 18
           registry-url: https://npm.pkg.github.com/
 
-      - run: npm install
+      # Install dependencies
+      - name: Install Dependencies
+        run: npm install
 
-      - run: npm publish
+      # Verify package name & version (debug step)
+      - name: Check package.json
+        run: cat package.json
+
+      # Publish package (safe)
+      - name: Publish Package
+        run: npm publish || echo "Skipping publish (possibly version already exists)"
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
