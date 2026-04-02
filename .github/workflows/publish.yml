@@ -35,6 +35,6 @@ jobs:
 
       # Publish package (safe)
       - name: Publish Package
-        run: npm publish || echo "Skipping publish (possibly version already exists)"
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: npm publish
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
