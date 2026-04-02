@@ -1,6 +1,6 @@
 {
   "name": "@rishta/db-models",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "models/index.js",
   "private": false,
   "files": [
